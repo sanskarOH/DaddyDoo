@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const jokeText = document.getElementById("joke-text");
     const jokeButton = document.getElementById("joke-button");
 
-    // Function to fetch a joke from an API (e.g., "https://icanhazdadjoke.com/api")
+    // Function to fetch a joke from an API 
     async function fetchJoke() {
         try {
             const response = await fetch("https://icanhazdadjoke.com/", {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 },
             });
             const data = await response.json();
-            return data.joke; // Assuming the API response has a 'joke' field
+            return data.joke; 
         } catch (error) {
             console.error("Error fetching joke:", error);
             return "Failed to fetch joke";
